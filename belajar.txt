@@ -1,15 +1,19 @@
 Git command local
 $ git init = untuk membuat folder menjadi repository (main / master)
-$ git add <file(s)>
-$ git status = untuk mengetahui perubahan apa yang terjadi pada repository, kalau misalkan ada yang merah berarti belum di git add
+$ git add <file(s)> = untuk menambahkan ke staging area
+$ git add . = untuk menambahkan perubahan seluruhnya
+$ git status = untuk mengetahui perubahan apa yang terjadi pada repository, kalau misalkan ada yang merah berarti belum di git add, kalau ada yang warna ijo berarti belum di git commit
 $ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
-$ git commit
+$ git commit -m "text nya disini" = untuk menambahkan file aja yang di commit
 $ git config
 $ git branch
 $ git help
 $ pwd = (print woring directory) untuk mengetahui kita bekerja di folder apa
 $ ls = untuk mengetahui file apa saja yang ada di direktori
 $ clear = untuk membersihkan layar
+$ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara keseluruhan
+$ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hanya 3 baris terakhir
+$ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
 
 
 3 area pada repo git
