@@ -1,8 +1,18 @@
 Git command local
-$ git init
+$ git init = untuk membuat folder menjadi repository (main / master)
 $ git add <file(s)>
-$ git status
+$ git status = untuk mengetahui perubahan apa yang terjadi pada repository, kalau misalkan ada yang merah berarti belum di git add
+$ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
 $ git commit
 $ git config
 $ git branch
 $ git help
+$ pwd = (print woring directory) untuk mengetahui kita bekerja di folder apa
+$ ls = untuk mengetahui file apa saja yang ada di direktori
+$ clear = untuk membersihkan layar
+
+
+3 area pada repo git
+1. working tree = nama reponya
+2. staging area = isi didalem reponya
+3. History
