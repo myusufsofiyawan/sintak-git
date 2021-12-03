@@ -3,7 +3,7 @@ branch = digunakan untuk membuat cabang-cabang pada commit fungsinya digunakan u
 merge = menggabungkan merge
 
 
-Git command local
+==== GIT COMMAND LOCAL ====
 $ git init = untuk membuat folder menjadi repository (main / master) -> pastikan sudah masuk ke direktory yang akan diubah menjadi repository
 $ git add <file(s)> = untuk menambahkan ke staging area
 $ git add . = untuk menambahkan perubahan seluruhnya ke staging area
@@ -12,16 +12,27 @@ $ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
 $ git commit -m "text nya disini" = untuk menambahkan file apa yang di commit
 $ git commit -am "mengubah file" = untuk meng add dan commit secara langsung, tanpa perintah git add terlebih dahulu -> kasusnya file yang termodified
 $ git config
-$ git branch
+$ git branch = untuk menampilkan branch apa aja yang sudah ada, tanda bintang * merupakan branc yang aktif
+$ git branch <nama file> = digunakan untuk  menambahkan brance
 $ git help
 $ pwd = (print woring directory) untuk mengetahui kita bekerja di folder apa
 $ ls = untuk mengetahui file apa saja yang ada di direktori
 $ clear = untuk membersihkan layar
+
+-----GIT CHECKOUT-----
+$ git checkout <nama branch> = digunakan untuk pindah kelain branch
+$ git checkout (kode 5 digit pertama) -- <nama file yang akan dikembalikan> = digunakan untuk kembali ke commit sebelumnya, atau keadaan sebelumnya, misalnya file yang udah dihapus mau dikembaliin, itu dengan git checkout
+contoh : $ git checkout 130f7 -- css-file.css
+
+-----GIT LOG-----
 $ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara keseluruhan
 $ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hanya 3 baris terakhir
 $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
-$ git checkout (kode 5 digit pertama) -- <nama file yang akan dikembalikan> = digunakan untuk kembali ke commit sebelumnya, atau keadaan sebelumnya, misalnya file yang udah dihapus mau dikembaliin, itu dengan git checkout
-contoh : $ git checkout 130f7 -- css-file.css
+$ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
+
+-----GIT ALIAS-----
+$ alias graph = "git log --all --decorate --oneline --graph"
+
 
 
 3 area pada repo git
