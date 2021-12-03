@@ -1,10 +1,16 @@
+Istilah-istilah
+branch = digunakan untuk membuat cabang-cabang pada commit fungsinya digunakan untuk menambahkan fitur baru, tapi belum yakin implementasinya, atau mengerjakan repo secara team
+merge = menggabungkan merge
+
+
 Git command local
-$ git init = untuk membuat folder menjadi repository (main / master)
+$ git init = untuk membuat folder menjadi repository (main / master) -> pastikan sudah masuk ke direktory yang akan diubah menjadi repository
 $ git add <file(s)> = untuk menambahkan ke staging area
-$ git add . = untuk menambahkan perubahan seluruhnya
+$ git add . = untuk menambahkan perubahan seluruhnya ke staging area
 $ git status = untuk mengetahui perubahan apa yang terjadi pada repository, kalau misalkan ada yang merah berarti belum di git add, kalau ada yang warna ijo berarti belum di git commit
 $ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
-$ git commit -m "text nya disini" = untuk menambahkan file aja yang di commit
+$ git commit -m "text nya disini" = untuk menambahkan file apa yang di commit
+$ git commit -am "mengubah file" = untuk meng add dan commit secara langsung, tanpa perintah git add terlebih dahulu -> kasusnya file yang termodified
 $ git config
 $ git branch
 $ git help
@@ -14,6 +20,8 @@ $ clear = untuk membersihkan layar
 $ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara keseluruhan
 $ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hanya 3 baris terakhir
 $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
+$ git checkout (kode 5 digit pertama) -- <nama file yang akan dikembalikan> = digunakan untuk kembali ke commit sebelumnya, atau keadaan sebelumnya, misalnya file yang udah dihapus mau dikembaliin, itu dengan git checkout
+contoh : $ git checkout 130f7 -- css-file.css
 
 
 3 area pada repo git
