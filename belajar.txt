@@ -6,6 +6,7 @@ Istilah-istilah
 - Three-way Merge / Merge Commit = digunakan untuk merge ketika tidak ada direct path jadi harus pake metode ini
 -> kalau mau merge, pindahkan dulu head nya di master / di main
 -> direct path = jalur branch nya nyambung langsung dengan jalur utama yaitu branch master / main
+-> remote = untuk mengcopy commit yang ada di github ke local
 
 
 ==== GIT COMMAND LOCAL ====
@@ -16,12 +17,17 @@ $ git status = untuk mengetahui perubahan apa yang terjadi pada repository, kala
 $ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
 $ git commit -m "text nya disini" = untuk menambahkan file apa yang di commit
 $ git commit -am "mengubah file" = untuk meng add dan commit secara langsung, tanpa perintah git add terlebih dahulu -> kasusnya file yang termodified
-$ git config
+
 
 $ git help
 $ pwd = (print woring directory) untuk mengetahui kita bekerja di folder apa
 $ ls = untuk mengetahui file apa saja yang ada di direktori
 $ clear = untuk membersihkan layar
+
+----- GIT CONFIG -----
+$ git config --list = digunakan untuk melihat username yang aktif
+$ git config --global user.name "usernamenya apa" = digunakan untuk mengganti username yang local
+$ git config --global user.name "emailnya apa" = digunakan untu mengganti emailnya yang local
 
 ----- GIT CHECKOUT -----
 $ git checkout <nama branch> = digunakan untuk pindah kelain branch
@@ -46,8 +52,11 @@ $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasark
 $ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
 
 ----- GIT ALIAS -----
-$ alias graph = "git log --all --decorate --oneline --graph"
+$ alias graph = "git log --all --decorate --oneline --graph" = untuk membuat alias graph jadi ngetik sintaknya ga panjang, berlaku hanya untuk 1 kali sesi, klo git nya di close, ya harus baut lagi aliasnya
 
+----- GIT REMOTE -----
+$ git remote = untuk melihat nama default remote, biasanya origin
+$ git remote -v = digunakan untuk melihat remote secara detail
 
 
 3 area pada repo git
