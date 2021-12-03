@@ -1,6 +1,11 @@
 Istilah-istilah
-branch = digunakan untuk membuat cabang-cabang pada commit fungsinya digunakan untuk menambahkan fitur baru, tapi belum yakin implementasinya, atau mengerjakan repo secara team
-merge = menggabungkan merge
+-> branch = digunakan untuk membuat cabang-cabang pada commit fungsinya digunakan untuk menambahkan fitur baru, tapi belum yakin implementasinya, atau mengerjakan repo secara team
+-> merge = menggabungkan merge
+-> ada dua istillah di dalam merge yaitu 
+- Fast Forward = digunakan untuk merge secara langsung
+- Three-way Merge / Merge Commit = digunakan untuk merge ketika tidak ada direct path jadi harus pake metode ini
+-> kalau mau merge, pindahkan dulu head nya di master / di main
+-> direct path = jalur branch nya nyambung langsung dengan jalur utama yaitu branch master / main
 
 
 ==== GIT COMMAND LOCAL ====
@@ -12,17 +17,27 @@ $ git rm --cached <nama file nya> = untuk mengeluarkan file dari staging area
 $ git commit -m "text nya disini" = untuk menambahkan file apa yang di commit
 $ git commit -am "mengubah file" = untuk meng add dan commit secara langsung, tanpa perintah git add terlebih dahulu -> kasusnya file yang termodified
 $ git config
-$ git branch = untuk menampilkan branch apa aja yang sudah ada, tanda bintang * merupakan branc yang aktif
-$ git branch <nama file> = digunakan untuk  menambahkan brance
+
 $ git help
 $ pwd = (print woring directory) untuk mengetahui kita bekerja di folder apa
 $ ls = untuk mengetahui file apa saja yang ada di direktori
 $ clear = untuk membersihkan layar
 
------GIT CHECKOUT-----
+----- GIT CHECKOUT -----
 $ git checkout <nama branch> = digunakan untuk pindah kelain branch
 $ git checkout (kode 5 digit pertama) -- <nama file yang akan dikembalikan> = digunakan untuk kembali ke commit sebelumnya, atau keadaan sebelumnya, misalnya file yang udah dihapus mau dikembaliin, itu dengan git checkout
 contoh : $ git checkout 130f7 -- css-file.css
+
+----- GIT BRANCH -----
+$ git branch = untuk menampilkan branch apa aja yang sudah ada, tanda bintang * merupakan branc yang aktif
+$ git branch <nama branch> = digunakan untuk  menambahkan branch
+$ git branch -d <nama branch> = digunakan untuk menghapus branch, tapi kalau belum di merge dia ngasih tau bahwa branch nya belum di merge
+$ git branch -D <nama branch> = digunakan untuk menghapus branch, tapi kalau belum di merge dia ga peduli branch nya udah di merge atau belum, jadi langsung diapus
+$ git branch --merged = untuk mengetahui branch manasaja yang sudah di merge
+
+----- GIT MERGE ----
+$ git merge <nama branch> = digunakan untuk menggabungkan branch, jangan lupa dipastikan head nya berada di master atau di main (metode Fast Forward)
+$ git merge <nama branch> "nama commitnya apa" = digunakan untuk menggabungkan branch, jangan lupa dipastikan head nya berada di master atau di main (metode Three-way Merge / Merge Commit)
 
 -----GIT LOG-----
 $ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara keseluruhan
@@ -30,7 +45,7 @@ $ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hany
 $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
 $ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
 
------GIT ALIAS-----
+----- GIT ALIAS -----
 $ alias graph = "git log --all --decorate --oneline --graph"
 
 
