@@ -26,8 +26,10 @@ $ clear = untuk membersihkan layar
 
 ----- GIT CONFIG -----
 $ git config --list = digunakan untuk melihat username yang aktif
-$ git config --global user.name "usernamenya apa" = digunakan untuk mengganti username yang local
-$ git config --global user.name "emailnya apa" = digunakan untu mengganti emailnya yang local
+$ git config --global user.name "usernamenya apa" = digunakan untuk mengganti username di folder global
+$ git config --global user.name "emailnya apa" = digunakan untu mengganti emailnya di folder global
+$ git config --local user.name "usernamenya apa" = digunakan untuk mengganti username yang local
+$ git config --local user.name "emailnya apa" = digunakan untu mengganti emailnya yang local
 
 ----- GIT CHECKOUT -----
 $ git checkout <nama branch> = digunakan untuk pindah kelain branch
@@ -58,6 +60,8 @@ $ alias graph = "git log --all --decorate --oneline --graph" = untuk membuat ali
 $ git remote = untuk melihat nama default remote, biasanya origin
 $ git remote -v = digunakan untuk melihat remote secara detail
 
+----- GIT PUSTH -----
+$ git push = digunakan untuk mengupload file yang dari local ke remote / online 
 
 3 area pada repo git
 1. working tree = nama reponya
