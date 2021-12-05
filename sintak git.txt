@@ -8,6 +8,10 @@ Istilah-istilah
 -> direct path = jalur branch nya nyambung langsung dengan jalur utama yaitu branch master / main
 -> remote = untuk mengcopy commit yang ada di github ke local
 
+3 area pada repo git
+1. working tree = nama reponya
+2. staging area = isi didalem reponya
+3. History
 
 ==== GIT COMMAND LOCAL ====
 $ git init = untuk membuat folder menjadi repository (main / master) -> pastikan sudah masuk ke direktory yang akan diubah menjadi repository
@@ -58,12 +62,16 @@ $ alias graph = "git log --all --decorate --oneline --graph" = untuk membuat ali
 
 ----- GIT REMOTE -----
 $ git remote = untuk melihat nama default remote, biasanya origin
-$ git remote -v = digunakan untuk melihat remote secara detail
+$ git remote -v = digunakan untuk melihat remote secara detail / alamatnya
+$ git remote add origin httpsxxxxxx = untuk menambahkan remote dari local ke github
+
 
 ----- GIT PUSTH -----
 $ git push = digunakan untuk mengupload file yang dari local ke remote / online 
+$ git pust -u origin master = digunakan untuk mengupload file dengan fungsi upstream yaitu kedepanya tinggal git push aja 
 
-3 area pada repo git
-1. working tree = nama reponya
-2. staging area = isi didalem reponya
-3. History
+----- GIT FETCH -----
+$ git fetch = digunakan untuk mengecek repo yang ada di remote udah sampe mana coomitnya, beda gak dengan yang kita punya
+
+----- GIT PULL -----
+$ git pull = digunakan untuk menarik codingan atau file yang ada di github ke local kita
