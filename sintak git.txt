@@ -63,7 +63,7 @@ $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasark
 $ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
 
 ----- GIT ALIAS -----
-$ alias graph = "git log --all --decorate --oneline --graph" = untuk membuat alias graph jadi ngetik sintaknya ga panjang, berlaku hanya untuk 1 kali sesi, klo git nya di close, ya harus baut lagi aliasnya
+$ alias graph="git log --all --decorate --oneline --graph" = untuk membuat alias graph jadi ngetik sintaknya ga panjang, berlaku hanya untuk 1 kali sesi, klo git nya di close, ya harus baut lagi aliasnya, inget jangan pake spasi sebelum dan setelah tanda =
 
 ----- GIT REMOTE -----
 $ git remote = untuk melihat nama default remote, biasanya origin
@@ -74,9 +74,17 @@ $ git remote add origin httpsxxxxxx = untuk menambahkan remote dari local ke git
 ----- GIT PUSTH -----
 $ git push = digunakan untuk mengupload file yang dari local ke remote / online 
 $ git pust -u origin master = digunakan untuk mengupload file dengan fungsi upstream yaitu kedepanya tinggal git push aja 
+$ git push origin <branch-name> = untuk mengupload di beda branch
 
 ----- GIT FETCH -----
 $ git fetch = digunakan untuk mengecek repo yang ada di remote udah sampe mana coomitnya, beda gak dengan yang kita punya
 
 ----- GIT PULL -----
 $ git pull = digunakan untuk menarik codingan atau file yang ada di github ke local kita
+
+----- GIT RESET -----
+$ git reset --hard HEAD~1 = digunakan untuk kembali ke commit sebelumnya, atau menghapus commit yang barusan di buat, dan kembali ke commit sebelumnya
+$ git reset --hard HEAD~3 = (remove last 3 commits from master)
+
+----- GIT DIFF -----
+$ git diff --name-only --cached = digunakan untuk menampilkan folder yang sudah masuk ke staging area
