@@ -88,3 +88,4 @@ $ git reset --hard HEAD~3 = (remove last 3 commits from master)
 
 ----- GIT DIFF -----
 $ git diff --name-only --cached = digunakan untuk menampilkan folder yang sudah masuk ke staging area
+
