@@ -61,6 +61,7 @@ $ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara
 $ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hanya 3 baris terakhir
 $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
 $ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
+$ git log --all --decorate --graph = digunakan untuk melacak commit dan head
 
 ----- GIT ALIAS -----
 $ alias graph="git log --all --decorate --oneline --graph" = untuk membuat alias graph jadi ngetik sintaknya ga panjang, berlaku hanya untuk 1 kali sesi, klo git nya di close, ya harus baut lagi aliasnya, inget jangan pake spasi sebelum dan setelah tanda =
