@@ -7,6 +7,7 @@ Istilah-istilah
 -> kalau mau merge, pindahkan dulu head nya di master / di main
 -> direct path = jalur branch nya nyambung langsung dengan jalur utama yaitu branch master / main
 -> remote = untuk mengcopy commit yang ada di github ke local
+-> commit = menyimpan data ke repository
 
 3 area pada repo git
 1. working tree = nama reponya
@@ -34,8 +35,7 @@ $ git add ./folder_name = untuk menambahkan 1 folder ke staging area
 
 ----- GIT CONFIG -----
 $ git config --list = digunakan untuk melihat username yang aktif
-$ git config --gl
-obal user.name "usernamenya apa" = digunakan untuk mengganti username di folder global
+$ git config --global user.name "usernamenya apa" = digunakan untuk mengganti username di folder global
 $ git config --global user.name "emailnya apa" = digunakan untu mengganti emailnya di folder global
 $ git config --local user.name "usernamenya apa" = digunakan untuk mengganti username yang local
 $ git config --local user.name "emailnya apa" = digunakan untu mengganti emailnya yang local
@@ -74,8 +74,9 @@ $ git remote add origin httpsxxxxxx = untuk menambahkan remote dari local ke git
 
 ----- GIT PUSTH -----
 $ git push = digunakan untuk mengupload file yang dari local ke remote / online 
-$ git pust -u origin master = digunakan untuk mengupload file dengan fungsi upstream yaitu kedepanya tinggal git push aja 
+$ git push -u origin master = digunakan untuk mengupload file dengan fungsi upstream yaitu kedepanya tinggal git push aja 
 $ git push origin <branch-name> = untuk mengupload di beda branch
+$ git push <remotename> <commit SHA>:<remotebranchname> = digunakan untuk push ke remote berdasarkan commit, artinya hanya commit yg dipilih yg di push ke github
 
 ----- GIT FETCH -----
 $ git fetch = digunakan untuk mengecek repo yang ada di remote udah sampe mana coomitnya, beda gak dengan yang kita punya
@@ -88,5 +89,6 @@ $ git reset --hard HEAD~1 = digunakan untuk kembali ke commit sebelumnya, atau m
 $ git reset --hard HEAD~3 = (remove last 3 commits from master)
 
 ----- GIT DIFF -----
+$ git diff = digunakan untuk melihat perubahan file yang terjadi
 $ git diff --name-only --cached = digunakan untuk menampilkan folder yang sudah masuk ke staging area
 
