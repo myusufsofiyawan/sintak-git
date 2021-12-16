@@ -35,10 +35,14 @@ $ git add ./folder_name = untuk menambahkan 1 folder ke staging area
 
 ----- GIT CONFIG -----
 $ git config --list = digunakan untuk melihat username yang aktif
+$ git config --list --show-origin = digunakan untuk melihat username yang aktif juga dengan detail
 $ git config --global user.name "usernamenya apa" = digunakan untuk mengganti username di folder global
 $ git config --global user.name "emailnya apa" = digunakan untu mengganti emailnya di folder global
 $ git config --local user.name "usernamenya apa" = digunakan untuk mengganti username yang local
 $ git config --local user.name "emailnya apa" = digunakan untu mengganti emailnya yang local
+$ git config --global core.editor "code --wait" = membuat default editor menjadi visual studio code
+$ git config --global diff.tool "default-difftool" = membuat default difftool menjadi visual studio code
+$ git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE" = membuat default difftool menjadi visual studio code
 
 ----- GIT CHECKOUT -----
 $ git checkout <nama branch> = digunakan untuk pindah kelain branch
@@ -59,6 +63,7 @@ $ git merge <nama branch> "nama commitnya apa" = digunakan untuk menggabungkan b
 -----GIT LOG-----
 $ git log = untuk mengetahui commit commit apa saja yang sudah di lakukan secara keseluruhan
 $ git log -3 = untuk mengetahui commit apa saja yang sudah dilakukan tetapi hanya 3 baris terakhir
+$ git log --online = untuk mengetahui commit apa saja yang sudah dilakukan tetapi dipersingkat / diperinci tidak terlalu panjang
 $ git log -- <nama file> = untuk mengetahui git commit secara spesifik berdasarkan file 
 $ git log --all --decorate --oneline --graph = digunakan untuk melacak branch dengan format visualisasi
 $ git log --all --decorate --graph = digunakan untuk melacak commit dan head
@@ -85,10 +90,26 @@ $ git fetch = digunakan untuk mengecek repo yang ada di remote udah sampe mana c
 $ git pull = digunakan untuk menarik codingan atau file yang ada di github ke local kita
 
 ----- GIT RESET -----
+$ git reset --soft <hash> = memindahkan HEAD pointer, namun tidak melakukan perubahan apapun di staging index dan working directory
+$ git reset --mixed <hash> = memindahkan HEAD pointer, mengubah staging index menjadi sama seperti repository, namun tidak mengubah apapun di working directory
+$ git reset --hard  <hash> = memindahkan HEAD pointer, mengubah staging index dan working directory sehingga sama dengan repository
 $ git reset --hard HEAD~1 = digunakan untuk kembali ke commit sebelumnya, atau menghapus commit yang barusan di buat, dan kembali ke commit sebelumnya
 $ git reset --hard HEAD~3 = (remove last 3 commits from master)
 
 ----- GIT DIFF -----
 $ git diff = digunakan untuk melihat perubahan file yang terjadi
 $ git diff --name-only --cached = digunakan untuk menampilkan folder yang sudah masuk ke staging area
+$ git diff <hash> HEAD = digunakan untuk melihat perbandingan perubahan file yang terjadi dari hash sampai ke head
+  contoh : $ git diff 099s28a HEAD = dari hash ke head
+           $ git diff 099s28a 299sa9a = dari hash ke hash
 
+----- GIT CLEAN -----
+$ git clean -f = digunakan untuk menghapus file yang baru masuk ke working direktori, jadi kita ga perlu ngapus satu persatu file nya
+
+----- GIT RESTORE -----
+$ git restore <nama file nya> = digunakan untuk membatalkan perubahan yang sudah kita buat ATAU dapat mengembalikan file yang sudah kita hapus (DI WORKING DIREKTORi>
+$ git restore --staged <nama file> = digunakan untuk membatalkan perubahan atau penambahan file yang sudah terlanjur masuk di staging index / staging area
+
+----- GIT SHOW -----
+$ git show <hasnya nya> = digunakan untuk melihat rincian perubahan yang terjadi pada commit
+$ git show HEAD = digunakan untuk melihat rincian perubahan yang terjadi pada HEAD
