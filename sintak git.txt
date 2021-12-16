@@ -124,6 +124,7 @@ $ git blame <namafile> = digunakan untuk mengetahui siapa yang melakukan perubah
 
 ----- GIT IGNORE-----
 .gitignore
+.vscode
 log/
 *.backup
 ignore.txt
