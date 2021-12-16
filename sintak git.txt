@@ -25,8 +25,9 @@ $ clear = untuk membersihkan layar
 
 ----- GIT COMMIT -----
 $ git commit -m 'message' -- <my-dir> = digunakan untuk commit berdasarkan folder
-$ git commit -m "text nya disini" = untuk menambahkan file apa yang di commit
+$ git commit -m "pesan nya disini" = untuk menambahkan file apa yang di commit
 $ git commit -am "mengubah file" = untuk meng add dan commit secara langsung, tanpa perintah git add terlebih dahulu -> kasusnya file yang termodified
+$ git commit --amend -m "pesan nya disini" = untuk menambahkan perubahan yang di lakukan, jadi dia gak buat commit baru tapi nimpah ke commit sebelumnya dan membuat hash baru
 
 ----- GIT ADD -----
 $ git add <file(s)> = untuk menambahkan ke staging area
@@ -43,6 +44,7 @@ $ git config --local user.name "emailnya apa" = digunakan untu mengganti emailny
 $ git config --global core.editor "code --wait" = membuat default editor menjadi visual studio code
 $ git config --global diff.tool "default-difftool" = membuat default difftool menjadi visual studio code
 $ git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE" = membuat default difftool menjadi visual studio code
+$ git config --global alias.co commit = mengubah perintah commit menjadi co
 
 ----- GIT CHECKOUT -----
 $ git checkout <nama branch> = digunakan untuk pindah kelain branch
@@ -113,3 +115,15 @@ $ git restore --staged <nama file> = digunakan untuk membatalkan perubahan atau 
 ----- GIT SHOW -----
 $ git show <hasnya nya> = digunakan untuk melihat rincian perubahan yang terjadi pada commit
 $ git show HEAD = digunakan untuk melihat rincian perubahan yang terjadi pada HEAD
+
+----- GIT REVERT-----
+$ git revert <hash> = digunakan untuk membatalkan perubahan sebelumnya, misalnya sebelumnya eka jadi eko, sekarang di balikin lagi dari eko ke eka
+
+----- GIT BLAME -----
+$ git blame <namafile> = digunakan untuk mengetahui siapa yang melakukan perubahan, dan apa yang dirubah
+
+----- GIT IGNORE-----
+.gitignore
+log/
+*.backup
+ignore.txt
